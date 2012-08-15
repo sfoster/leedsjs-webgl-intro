@@ -1,0 +1,55 @@
+{
+  "frontmatter": {
+    "body": "* @leedsjs\n* leedsjs.org\n* 2nd Wednesday of every month\n",
+    "id": "frontmatter",
+    "title": "WebGL Night",
+    "x": "0",
+    "y": "0"
+  },
+  "agenda": {
+    "body": "* WebGL Intro, Sam Foster \n\n* THREE.js and tQuery (Jerome Etienne)\n\n* Pub (Mr Foleys)\n\n",
+    "id": "agenda",
+    "title": "Agenda",
+    "x": "1",
+    "y": "0",
+    "classes": "compact"
+  },
+  "aboutme": {
+    "body": "* Sam Foster, \n* Web Engineer, Mozilla.\n\n* [@samfosteriam](http://twitter.com/samfosteriam)\n\n* Next to no experience with WebGL",
+    "id": "aboutme",
+    "title": "WebGL Intro",
+    "x": "0",
+    "y": "1",
+    "classes": "medium"
+  },
+  "basics": {
+    "body": "* 2D and 3D Javascript graphics api\n* No plugins\n* Via &lt;canvas&gt;\n\n* GPU accelerated\n* composites with HTML and web content\n\n* control code: Javascript\n* shader code: GPU\n",
+    "id": "basics",
+    "title": "The Basics",
+    "scale": 1,
+    "x": "0",
+    "y": "2",
+    "classes": "medium"
+  },
+  "caniuse": {
+    "id": "caniuse",
+    "x": "1",
+    "y": "2",
+    "body": "![But can I use it?](/resources/media/canIUseWebGL.png)\n\n[WebGL on caniuse.com](http://caniuse.com/#feat=webgl)",
+    "title": "Can I Use It?"
+  },
+  "differences": {
+    "id": "differences",
+    "x": "2",
+    "y": "2",
+    "body": "* based on OpenGL ES2.0\n* differences go both ways\n* things webgl has that opengl doesn't and vice-versa\n* [khronos.org WebGL and OpenGL Differences](http://www.khronos.org/webgl/wiki/WebGL_and_OpenGL_Differences)\n* [webgl-reference-card-1_0.pdf](http://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)\n",
+    "title": "OpenGL / WebGL"
+  },
+  "resources": {
+    "id": "resources",
+    "x": "3",
+    "y": "2",
+    "body": "* [learning webgl](http://learningwebgl.com/)\n* [THREE.js](https://github.com/mrdoob/three.js/)\n* [Learning three.js](http://learningthreejs.com/)\n* [Scene.js](http://scenejs.org/)",
+    "title": "Resources"
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{{title}}</title>
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="resources/slides.css" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/vendor/ace/css/editor.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link href="resources/style.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="resources/impress.js/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/impress.js/apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+
+<div id="impress">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+    
+{{#slides}}
+    <div id="{{id}}" class="step {{classes}}" data-x="{{x}}" data-y="{{y}}" {{#scale}}data-scale="{{scale}}"{{/scale}}>
+      <div class="slide-header"><h3>{{{title}}}</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body">{{{body}}}</div>
+        </div>
+      </div>
+    </div>
+{{/slides}}    
+    
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<script src="resources/impress.js/js/impress.js"></script>
+<script src="resources/vendor/jquery-1.7.2.js"></script>
+<script src="resources/vendor/require.js"></script>
+<script>
+  require({
+    baseUrl: './resources',
+    paths: {
+      '$': 'dollar',
+      'use': 'plugins/use',
+      'json': 'plugins/json',
+      'text': 'plugins/text',
+      'ace': 'vendor/ace'
+    }
+  }, ['ace/ace'], function(ace){
+    impress();
+    var ta = $('textarea.codesample');
+    $('#themesong-btn').on('click', function(evt){
+      var node = evt.target, isPlaying = $(node).hasClass('playing');
+       if(isPlaying){
+         $('#themesong-audio')[0].pause();
+         $(node).removeClass('playing');
+       } else {
+         $('#themesong-audio')[0].play();
+         $(node).addClass('playing');
+       }
+    });
+  });
+</script>  
+
+<script>
+  $(document).load(function(){
+    impress();    
+  });
+  $(document.body).click(function(evt){
+    if(evt.target.tagName == 'A') {
+      evt.preventDefault();
+      // Change "_blank" to something like "newWindow" to load all links in the same new window
+      viewWindow = window.open(evt.target.href, 'viewer');
+      newWindow.focus();
+      return false;
+    }
+  });
+</script>
+
+</body>
+</html>
