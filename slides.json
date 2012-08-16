@@ -1,6 +1,6 @@
 {
   "frontmatter": {
-    "body": "* @leedsjs\n* leedsjs.org\n* 2nd Wednesday of every month\n",
+    "body": "* [@leedsjs](http://twitter.com/leedsjs)\n* [leedsjs.org](http://leedsjs.org)\n* 2nd Wednesday of every month\n",
     "id": "frontmatter",
     "title": "WebGL Night",
     "x": "0",
@@ -35,7 +35,7 @@
     "id": "caniuse",
     "x": "1",
     "y": "2",
-    "body": "![But can I use it?](/resources/media/canIUseWebGL.png)\n\n[WebGL on caniuse.com](http://caniuse.com/#feat=webgl)",
+    "body": "![But can I use it?](./resources/media/canIUseWebGL.png)\n\n[WebGL on caniuse.com](http://caniuse.com/#feat=webgl)",
     "title": "Can I Use It?"
   },
   "differences": {
@@ -45,11 +45,18 @@
     "body": "* based on OpenGL ES2.0\n* differences go both ways\n* things webgl has that opengl doesn't and vice-versa\n* [khronos.org WebGL and OpenGL Differences](http://www.khronos.org/webgl/wiki/WebGL_and_OpenGL_Differences)\n* [webgl-reference-card-1_0.pdf](http://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)\n",
     "title": "OpenGL / WebGL"
   },
-  "resources": {
-    "id": "resources",
+  "whatislike": {
+    "id": "whatitlike",
+    "title": "Show me some code!",
     "x": "3",
     "y": "2",
-    "body": "* [learning webgl](http://learningwebgl.com/)\n* [THREE.js](https://github.com/mrdoob/three.js/)\n* [Learning three.js](http://learningthreejs.com/)\n* [Scene.js](http://scenejs.org/)",
+    "body": "* [simplest demo](http://learningwebgl.com/lessons/lesson01/index.html)\n\n* [the code](https://github.com/gpjt/webgl-lessons/blob/master/lesson01/index.html)"
+  },
+  "resources": {
+    "id": "resources",
+    "x": "4",
+    "y": "2",
+    "body": "* [learning webgl](http://learningwebgl.com/)\n* [THREE.js](https://github.com/mrdoob/three.js/)\n* [Learning three.js](http://learningthreejs.com/)\n* [Scene.js](http://scenejs.org/)\n* [dev.opera raw webgl](http://dev.opera.com/articles/view/raw-webgl-part1-getting-started/)",
     "title": "Resources"
   }
 }

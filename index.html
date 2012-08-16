@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>LeedsJs: WebGL Intro</title>
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="resources/slides.css" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/vendor/ace/css/editor.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link href="resources/style.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="resources/impress.js/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/impress.js/apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+
+<div id="impress">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+    
+    <div id="frontmatter" class="step " data-x="0" data-y="0" >
+      <div class="slide-header"><h3>WebGL Night</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><ul>
+<li><a href="http://twitter.com/leedsjs">@leedsjs</a></li>
+<li><a href="http://leedsjs.org">leedsjs.org</a></li>
+<li>2nd Wednesday of every month</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div id="agenda" class="step compact" data-x="1200" data-y="0" >
+      <div class="slide-header"><h3>Agenda</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><ul>
+<li><p>WebGL Intro, Sam Foster </p>
+</li>
+<li><p>THREE.js and tQuery (Jerome Etienne)</p>
+</li>
+<li><p>Pub (Mr Foleys)</p>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div id="aboutme" class="step medium" data-x="0" data-y="800" >
+      <div class="slide-header"><h3>WebGL Intro</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><ul>
+<li>Sam Foster, </li>
+<li><p>Web Engineer, Mozilla.</p>
+</li>
+<li><p><a href="http://twitter.com/samfosteriam">@samfosteriam</a></p>
+</li>
+<li><p>Next to no experience with WebGL</p>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div id="basics" class="step medium" data-x="0" data-y="1600" data-scale="1">
+      <div class="slide-header"><h3>The Basics</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><ul>
+<li>2D and 3D Javascript graphics api</li>
+<li>No plugins</li>
+<li><p>Via &lt;canvas&gt;</p>
+</li>
+<li><p>GPU accelerated</p>
+</li>
+<li><p>composites with HTML and web content</p>
+</li>
+<li><p>control code: Javascript</p>
+</li>
+<li>shader code: GPU</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div id="caniuse" class="step " data-x="1200" data-y="1600" >
+      <div class="slide-header"><h3>Can I Use It?</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><p><img src="/resources/media/canIUseWebGL.png" alt="But can I use it?">
+
+</p>
+<p><a href="http://caniuse.com/#feat=webgl">WebGL on caniuse.com</a></p>
+</div>
+        </div>
+      </div>
+    </div>
+    <div id="differences" class="step " data-x="2400" data-y="1600" >
+      <div class="slide-header"><h3>OpenGL / WebGL</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><ul>
+<li>based on OpenGL ES2.0</li>
+<li>differences go both ways</li>
+<li>things webgl has that opengl doesn&#39;t and vice-versa</li>
+<li><a href="http://www.khronos.org/webgl/wiki/WebGL_and_OpenGL_Differences">khronos.org WebGL and OpenGL Differences</a></li>
+<li><a href="http://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf">webgl-reference-card-1_0.pdf</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div id="whatislike" class="step " data-x="3600" data-y="1600" >
+      <div class="slide-header"><h3>Show me some code!</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><ul>
+<li><p><a href="http://learningwebgl.com/lessons/lesson01/index.html">simplest demo</a></p>
+</li>
+<li><p><a href="https://github.com/gpjt/webgl-lessons/blob/master/lesson01/index.html">the code</a></p>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+    <div id="resources" class="step " data-x="4800" data-y="1600" >
+      <div class="slide-header"><h3>Resources</h3></div>
+      <div class="media">
+        <div class="img">
+          <span class="imgblock"></span>
+        </div>
+        <div class="bd">
+          <div class="slide-body"><ul>
+<li><a href="http://learningwebgl.com/">learning webgl</a></li>
+<li><a href="https://github.com/mrdoob/three.js/">THREE.js</a></li>
+<li><a href="http://learningthreejs.com/">Learning three.js</a></li>
+<li><a href="http://scenejs.org/">Scene.js</a></li>
+<li><a href="http://dev.opera.com/articles/view/raw-webgl-part1-getting-started/">dev.opera raw webgl</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<script src="resources/impress.js/js/impress.js"></script>
+<script src="resources/vendor/jquery-1.7.2.js"></script>
+<script src="resources/vendor/require.js"></script>
+<script>
+  require({
+    baseUrl: './resources',
+    paths: {
+      '$': 'dollar',
+      'use': 'plugins/use',
+      'json': 'plugins/json',
+      'text': 'plugins/text',
+      'ace': 'vendor/ace'
+    }
+  }, ['ace/ace'], function(ace){
+    impress();
+  });
+</script>  
+
+<script>
+  $(document).load(function(){
+    impress();    
+  });
+  $(document.body).click(function(evt){
+    if(evt.target.tagName == 'A') {
+      evt.preventDefault();
+      // Change "_blank" to something like "newWindow" to load all links in the same new window
+      viewWindow = window.open(evt.target.href, 'viewer');
+      newWindow.focus();
+      return false;
+    }
+  });
+</script>
+
+</body>
+</html>

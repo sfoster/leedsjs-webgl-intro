@@ -58,17 +58,6 @@
     }
   }, ['ace/ace'], function(ace){
     impress();
-    var ta = $('textarea.codesample');
-    $('#themesong-btn').on('click', function(evt){
-      var node = evt.target, isPlaying = $(node).hasClass('playing');
-       if(isPlaying){
-         $('#themesong-audio')[0].pause();
-         $(node).removeClass('playing');
-       } else {
-         $('#themesong-audio')[0].play();
-         $(node).addClass('playing');
-       }
-    });
   });
 </script>  
 
